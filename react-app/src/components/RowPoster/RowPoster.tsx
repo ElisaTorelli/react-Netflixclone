@@ -1,4 +1,4 @@
-import styles from './rowPoster.module.css';
+import styles from './rowposter.module.css';
 import Poster from '../Poster/Poster';
 import { getImg } from '../../commons/API';
 
