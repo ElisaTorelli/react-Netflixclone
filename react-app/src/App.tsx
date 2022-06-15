@@ -1,9 +1,9 @@
-import Row from "./components/Row/Row";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Row />
+      <Footer />
     </div>
   );
 }
