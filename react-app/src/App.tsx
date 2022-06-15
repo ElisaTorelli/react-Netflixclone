@@ -4,12 +4,13 @@ import Row from "./components/Row/Row";
 import RowNumber from "./components/RowNumber/RowNumber";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Index from "./components/Index/Index";
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/>
       <Header />
       <Row />
       <Row />
@@ -18,7 +19,8 @@ function App() {
       <RowNumber />
       <Row />
       <Row />
-      <Footer />
+      <Footer /> */}
+      <Index />
     </div>
   );
 }
