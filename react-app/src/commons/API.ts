@@ -8,3 +8,4 @@ function getImg(arg: string){
 }
 
 export{getImg}
+
