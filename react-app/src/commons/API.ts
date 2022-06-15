@@ -4,6 +4,7 @@
  * @returns image path + arg
  */
 function getImg(arg: string){
-    return require(`../../assets/images/${arg}`)
+    return require(`../assets/images/${arg}`)
 }
+
 export{getImg}
