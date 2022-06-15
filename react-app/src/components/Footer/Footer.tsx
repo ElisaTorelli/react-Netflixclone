@@ -1,15 +1,18 @@
-import styles from "./footer.module.css"
-import socialImg from "../../assets/images/Social.png"
-import social from "../../assets/images/grayBorder.png"
+import styles from "./footer.module.css";
 
 const Footer = () => {
+
+  function path(param: string){
+    return require(`../../assets/images/${param}`)
+  }
+
   return (
-    <div>
+    <>
       {/* -- LAST SECTION LINKS  */}
       <footer className={styles["footer"]}>
         {/* -- SOCIAL MEDIA ICONS  */}
         <div className={styles["last__section__image"]}>
-          <img src={socialImg} alt="social logo img" />
+          <img src={path("Social.png")} alt="social logo img" />
         </div>
 
         <div className={styles["footer-cols"]}>
@@ -18,7 +21,7 @@ const Footer = () => {
             <li><a href="#">Rapporti con gli investitori</a></li>
             <li><a href="#">Note legali</a></li>
             <li><a href="#">Bize ulasin</a></li>
-            <li><a href="#" id={styles["gray_box"]}><img src={social} alt="gray icon" /></a></li>
+            <li><a href="#" id={styles["gray_box"]}><img src={path("grayBorder.png")} alt="gray icon" /></a></li>
           </ul>
           <ul className={styles["second_link"]}>
             <li><a href="#">Centro assistenza</a></li>
@@ -37,7 +40,7 @@ const Footer = () => {
           </ul>
         </div>
       </footer>
-    </div>
+    </>
   )
 }
 
