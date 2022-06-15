@@ -14,7 +14,7 @@ const RowNumber = () => {
           <img src={getImg("Vector-right.png")} alt="Destra" />
         </button>
         <button className={`${styles.freccia} ${styles.left} ${styles.number}`}>
-          <img src={getImg("Vector-right.png")} alt="Sinistra" />
+          <img src={getImg("Vector-left.png")} alt="Sinistra" />
         </button>
         <div className={styles["container-row"]}>
           <CardNumber />
