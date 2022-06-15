@@ -24,13 +24,6 @@
   font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Netflix Sans Regular";
-}
-
 /* COLOR VARIABLES */
 :root {
   --white: #fff;
@@ -40,4 +33,23 @@
   --gray-2: #808080;
   --black: #141414;
   --red: #b9090b;
+}
+
+/* GENERAL SETTINGS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Netflix Sans Regular";
+}
+
+h3 {
+  color: var(--white);
+  margin-left: 32px;
+  font-size: 17px;
+  box-sizing: border-box;
+
+body {
+  background-color: var(--black);
 }
