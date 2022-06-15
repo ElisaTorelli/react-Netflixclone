@@ -9,10 +9,10 @@ let arMovie = [{titolo:"Questione di chimica",duration:"58",synopsis:"Dopo la di
 {titolo:"Un pugno di mosche",duration:"48",synopsis:"Per finanziare le crescenti spese mediche del suo trattamento, Walt chiede a Jesse di trovare un acquirente per la droga. Per farlo, Jesse si mette nei guai."},
 {titolo:"Vendetta",duration:"47",synopsis:"Una volta che Jesse è scampato alla morte, Walt accetta di produrre ancor più droga per lo spietato Tuco. Nel frattempo, Skyler sospetta la sorella di cleptomania."}];
 
-let arSelection = [{value:"stagione1",option:"Satgione 1"},
-{value:"stagione2",option:"Satgione 2"},
-{value:"stagione3",option:"Satgione 3"},
-{value:"stagione4",option:"Satgione 4"},]
+let arSelection = [{value:"stagione1",option:"Stagione 1"},
+{value:"stagione2",option:"Stagione 2"},
+{value:"stagione3",option:"Stagione 3"},
+{value:"stagione4",option:"Stagione 4"},]
 
 const Dialog = () => {
   return (
