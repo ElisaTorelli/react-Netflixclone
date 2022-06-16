@@ -14,9 +14,6 @@
 .row-number::-webkit-scrollbar {
   display: none;
 }
-.top10 {
-  font-size: 16px;
-}
 
 /* ARROW */
 
@@ -37,7 +34,6 @@
 .freccia.left {
   position: absolute;
   left: 0;
-  bottom: 0;
 }
 
 .freccia.right {
