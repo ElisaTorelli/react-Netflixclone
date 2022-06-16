@@ -41,7 +41,7 @@ const Dialog = () => {
                 </div>
             </button>
         </div>
-        <dialog /*open=""*/ className={styles.rowinfo}>
+        <div className={styles.rowinfo}>
             <p className={styles.pinfo}>99% compatibile</p>
             <p className={styles.pinfo2}>2013</p>
             <p className={styles.pinfo3}>VM14</p>
@@ -58,7 +58,7 @@ const Dialog = () => {
                     <strong>Caratteristiche:</strong><span>Violento,Crudo,Cupo</span><br/>
                 </div>
             </div>
-        </dialog>
+        </div>
         <div className={styles.space}>
             <div className={styles.top}>
                 <h3>Episodi</h3>
@@ -67,7 +67,7 @@ const Dialog = () => {
                       {
                         arSelection.map((item,index) =>{
                           return(
-                            <option value={item.value}>{item.option}</option>
+                            <option key={`${item.option + index}`} value={item.value}>{item.option}</option>
                           )
                         })
                       }

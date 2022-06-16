@@ -6,9 +6,16 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Index from "./components/Index/Index";
 import Dialog from "./components/Dialog/Dialog";
+import { useState } from "react";
 
 
 function App() {
+  const [dialogState, setDialogState] = useState<boolean>(false);
+  let dialog = dialogState? <Dialog/> : null;
+  function open(){
+    let value = dialogState? false : true;
+    setDialogState(value);
+  }
   return (
     <div className="App">
       {/* <Navbar/>
@@ -21,8 +28,12 @@ function App() {
       <Row />
       <Row />
       <Footer />
-      <Index /> */}
-      <Dialog/>
+      <Index /> 
+      <Dialog/>*/}
+      <button onClick={open}>Dialog</button>
+      {
+        dialog
+      }
     </div>
   );
 }
