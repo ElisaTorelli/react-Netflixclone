@@ -38,17 +38,13 @@ function App() {
       <Row title="Film Popolari" movieList={data} />
       <Row title="Film Popolari" movieList={data} />
       <Row title="Film Popolari" movieList={data} />
-      <RowPoster />
-      <RowNumber />
-      <Row />
-      <Row />
+      <RowPoster title="Originali Netflix" movieList={data} />
+      <RowNumber title="Top 10 in Italia" movieList={data} />
+      <Row title="Film Popolari" movieList={data} />
+      <Row title="Film Popolari" movieList={data} />
       <Footer />
       <Index /> 
-      <Dialog/>*/}
-      <button onClick={open}>Dialog</button>
-      {
-        dialog
-      }
+      <Dialog/>
     </div>
   );
 };
