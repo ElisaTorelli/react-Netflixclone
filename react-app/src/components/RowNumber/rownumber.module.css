@@ -9,9 +9,10 @@
 .container-row {
   width: 100%;
   display: flex;
+  margin-left: 44px;
 }
 .row-number::-webkit-scrollbar {
-  background: transparent;
+  display: none;
 }
 .top10 {
   font-size: 16px;
@@ -36,6 +37,7 @@
 .freccia.left {
   position: absolute;
   left: 0;
+  bottom: 0;
 }
 
 .freccia.right {
@@ -44,6 +46,6 @@
 }
 .freccia.number {
   padding: 80px 20px;
-  height: 200px;
+  height: 220px;
   background-color: transparent;
 }

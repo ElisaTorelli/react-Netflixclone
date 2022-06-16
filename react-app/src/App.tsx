@@ -30,10 +30,12 @@ const App: React.FC<{}> = () => {
       <Row title="Film Popolari" movieList={data} />
       <Row title="Film Popolari" movieList={data} />
       <Row title="Film Popolari" movieList={data} />
-      <RowPoster />
-      <RowNumber />
+      <RowPoster title="Originali Netflix" movieList={data} />
+      <RowNumber title="Top 10 in Italia" movieList={data} />
+      <Row title="Film Popolari" movieList={data} />
+      <Row title="Film Popolari" movieList={data} />
       {/* <Index /> */}
-      <Dialog />
+      {/* <Dialog /> */}
       <Footer />
     </div>
   );
