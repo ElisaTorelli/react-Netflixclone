@@ -6,12 +6,18 @@ import RowNumber from "./components/RowNumber/RowNumber";
 import Header from "./components/Header/Header";
 import { IMovie } from "./commons/IResult";
 import Footer from "./components/Footer/Footer";
-
-import Index from "./components/Index/Index";
 import Dialog from "./components/Dialog/Dialog";
+import { dialogContext } from "./commons/context";
+
+
 
 const App: React.FC<{}> = () => {
+
   const [data, setData] = useState<Array<IMovie> | []>([]);
+
+  const [open, setOpen] = useState<boolean>(false);
+  let dialog = open? <Dialog/> : null;
+
 
   useEffect(() => {
     fetch(
@@ -24,7 +30,8 @@ const App: React.FC<{}> = () => {
   }, []);
 
   return (
-    <div className="App">
+    <dialogContext.Provider value={{open, setOpen}}>
+      <div className="App">
       <Navbar />
       <Header />
       <Row title="Film Popolari" movieList={data} />
@@ -33,11 +40,12 @@ const App: React.FC<{}> = () => {
       <RowPoster />
       <RowNumber />
       {/* <Index /> */}
-      {/* <Dialog /> */}
       <Row title="Ultime uscite" movieList={data} />
-      <Row title="Drammi" movieList={data} />
+      <Row title="" movieList={data} />
       <Footer />
+      {dialog}
     </div>
+    </dialogContext.Provider>
   );
 };
 
