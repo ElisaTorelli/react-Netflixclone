@@ -63,7 +63,7 @@ const Dialog = () => {
             <div className={styles.top}>
                 <h3>Episodi</h3>
                 <div className={styles.shows}>
-                    <select name='show' id='show' className={styles.show}>
+                    <select name='show' id='show' title='dialog' className={styles.show}>
                       {
                         arSelection.map((item,index) =>{
                           return(
