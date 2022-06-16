@@ -1,4 +1,7 @@
+import { useContext, useState } from "react";
+import { dialogContext } from "../../commons/context";
 import { IMovie } from "../../commons/IResult";
+import Dialog from "../Dialog/Dialog";
 import styles from "./card.module.css";
 
 
@@ -9,8 +12,15 @@ interface ICard {
 const Card: React.FC<ICard> = ({ movie: { backdrop_path, title } }) => {
   let imgPrefix = "https://image.tmdb.org/t/p/original";
 
+  const {open, setOpen} = useContext(dialogContext)
+
+  function setDialog(){
+    let value = open? false : true;
+    setOpen(value);
+  }
+
   return (
-    <div className={styles["general-container"]}>
+    <div className={styles["general-container"]} onClick={setDialog}>
       <div className={styles["card"]}>
         <div className={styles["card__info"]}>
           <div className={styles["container-button"]}>

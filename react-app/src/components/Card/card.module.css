@@ -120,3 +120,7 @@
 .show-description ul li {
   list-style-type: none;
 }
+
+.text{
+  color: green;
+}

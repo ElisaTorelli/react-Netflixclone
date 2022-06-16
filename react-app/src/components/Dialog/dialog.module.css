@@ -30,11 +30,12 @@
     margin-left: -100px;
     background-color: var(--black);
     z-index: 999999;
+    
 }
 /*Header part*/
 .imgb{
     width: 100%;
-  }
+}
 .dialog__banner__button {
     cursor: pointer;
     outline: none;
