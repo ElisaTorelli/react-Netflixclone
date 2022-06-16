@@ -10,7 +10,7 @@ import Index from "./components/Index/Index";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/>
+      <Navbar/>
       <Header />
       <Row />
       <Row />
@@ -19,8 +19,8 @@ function App() {
       <RowNumber />
       <Row />
       <Row />
-      <Footer /> */}
-      <Index />
+      <Footer />
+      {/* <Index /> */}
     </div>
   );
 }

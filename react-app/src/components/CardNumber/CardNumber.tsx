@@ -14,6 +14,15 @@ import styles from "./cardnumber.module.css";
 //   "./assets/images/Movie2.png",
 // ];
 
+// function numberListMovie (){
+//   for(let i = 0; i < numberArray.length; i++){
+
+//   }
+// }
+// numberListMovie();
+
+
+
 const CardNumber = () => {
   return (
     <div className={styles["container-movie"]}>
