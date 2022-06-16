@@ -33,7 +33,7 @@ const App: React.FC<{}> = () => {
       <RowPoster />
       <RowNumber />
       {/* <Index /> */}
-      <Dialog />
+      {/* <Dialog /> */}
       <Footer />
     </div>
   );
