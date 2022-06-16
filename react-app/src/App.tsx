@@ -37,11 +37,11 @@ const App: React.FC<{}> = () => {
       <Row title="Film Popolari" movieList={data} />
       <Row title="Campari, continua a guardare..." movieList={data} />
       <Row title="Popolari in Italia" movieList={data} />
-      <RowPoster />
-      <RowNumber />
+      <RowPoster title="Originali Netflix" movieList={data} />
+      <RowNumber title="Top 10 in Italia" movieList={data} />
       {/* <Index /> */}
       <Row title="Ultime uscite" movieList={data} />
-      <Row title="" movieList={data} />
+      <Row title="Popolari Netflix" movieList={data} />
       <Footer />
       {dialog}
     </div>
