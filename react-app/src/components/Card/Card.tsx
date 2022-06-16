@@ -1,6 +1,7 @@
 import { IMovie } from "../../commons/IResult";
 import styles from "./card.module.css";
 
+
 interface ICard {
   movie: IMovie;
 }
@@ -15,27 +16,25 @@ const Card: React.FC<ICard> = ({ movie: { backdrop_path, title } }) => {
           <div className={styles["container-button"]}>
             <div className={styles["box-button"]}>
               <div>
-                <span className={styles["material-symbols-outlined"]}>
-                  play_circle
+              <span className="material-symbols-outlined">
+              play_circle
+              </span>
+              </div>
+              <div>
+              <span className="material-symbols-outlined">
+                add_circle
                 </span>
               </div>
               <div>
-                <span className={styles["material-symbols-outlined"]}>
-                  add_circle
-                </span>
-              </div>
-              <div>
-                <span className={styles["material-symbols-outlined"]}>
-                  recommend
-                </span>
+              <span className="material-symbols-outlined">
+              recommend
+              </span>
               </div>
             </div>
             <div className={styles["box-button-circle"]}>
-              <span
-                className={styles["material-symbols-outlined circle-down-icon"]}
-              >
-                expand_circle_down
-              </span>
+            <span className="material-symbols-outlined">
+            expand_circle_down
+            </span>
               <div className={styles["alert"]}>Episodi e info</div>
             </div>
           </div>

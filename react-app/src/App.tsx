@@ -28,12 +28,14 @@ const App: React.FC<{}> = () => {
       <Navbar />
       <Header />
       <Row title="Film Popolari" movieList={data} />
-      <Row title="Film Popolari" movieList={data} />
-      <Row title="Film Popolari" movieList={data} />
+      <Row title="Campari, continua a guardare..." movieList={data} />
+      <Row title="Popolari in Italia" movieList={data} />
       <RowPoster />
       <RowNumber />
       {/* <Index /> */}
       {/* <Dialog /> */}
+      <Row title="Ultime uscite" movieList={data} />
+      <Row title="Drammi" movieList={data} />
       <Footer />
     </div>
   );
