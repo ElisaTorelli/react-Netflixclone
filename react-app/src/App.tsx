@@ -5,6 +5,7 @@ import RowNumber from "./components/RowNumber/RowNumber";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Index from "./components/Index/Index";
+import Dialog from "./components/Dialog/Dialog";
 
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
       <RowNumber />
       <Row />
       <Row />
-      <Footer />
       {/* <Index /> */}
+      <Dialog/>
+      <Footer />
     </div>
   );
 }
