@@ -9,7 +9,7 @@
 }
 
 /* HOVER EFFECT ON IMG */
-.cards .card {
+.card {
   padding: 14px 2px;
   transition: 250ms all;
 }
@@ -30,7 +30,7 @@
 }
 
 /* boxInfoDisplayWhenHover */
-.cards .general-container:hover .card__info {
+.general-container:hover .card__info {
   display: block;
   position: absolute;
   bottom: 0px;

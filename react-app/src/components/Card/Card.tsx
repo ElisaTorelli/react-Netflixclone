@@ -1,7 +1,13 @@
-import React from "react";
+import { IMovie } from "../../commons/IResult";
 import styles from "./card.module.css";
 
-const Card = () => {
+interface ICard {
+  movie: IMovie;
+}
+
+const Card: React.FC<ICard> = ({ movie: { backdrop_path, title } }) => {
+  let imgPrefix = "https://image.tmdb.org/t/p/original";
+
   return (
     <div className={styles["general-container"]}>
       <div className={styles["card"]}>
@@ -54,7 +60,11 @@ const Card = () => {
           </div>
         </div>
       </div>
-      <img className={styles["card-container"]} src="" alt="Snowpiercere" />
+      <img
+        className={styles["card-container"]}
+        src={`${imgPrefix + backdrop_path}`}
+        alt={title}
+      />
     </div>
   );
 };
