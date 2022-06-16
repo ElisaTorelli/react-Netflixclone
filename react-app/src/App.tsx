@@ -20,8 +20,8 @@ function App() {
       <RowNumber />
       <Row />
       <Row />
-      <Footer /> */}
-      <Index />
+      <Footer />
+      <Index /> */}
       <Dialog/>
     </div>
   );
