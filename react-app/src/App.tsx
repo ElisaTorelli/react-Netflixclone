@@ -11,7 +11,7 @@ import Dialog from "./components/Dialog/Dialog";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/>
+      <Navbar/>
       <Header />
       <Row />
       <Row />
@@ -20,9 +20,9 @@ function App() {
       <RowNumber />
       <Row />
       <Row />
-      <Footer /> */}
-      <Index />
+      {/* <Index /> */}
       <Dialog/>
+      <Footer />
     </div>
   );
 }
