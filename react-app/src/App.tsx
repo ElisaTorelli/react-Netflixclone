@@ -7,6 +7,9 @@ import Header from "./components/Header/Header";
 import { IMovie } from "./commons/IResult";
 import Footer from "./components/Footer/Footer";
 
+import Index from "./components/Index/Index";
+import Dialog from "./components/Dialog/Dialog";
+
 const App: React.FC<{}> = () => {
   const [data, setData] = useState<Array<IMovie> | []>([]);
 
@@ -29,6 +32,8 @@ const App: React.FC<{}> = () => {
       <Row title="Film Popolari" movieList={data} />
       <RowPoster />
       <RowNumber />
+      {/* <Index /> */}
+      <Dialog />
       <Footer />
     </div>
   );
