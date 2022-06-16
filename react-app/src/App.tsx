@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 import Index from "./components/Index/Index";
 import Dialog from "./components/Dialog/Dialog";
+import { useState } from "react";
 
 const App: React.FC<{}> = () => {
   const [data, setData] = useState<Array<IMovie> | []>([]);
@@ -23,6 +24,13 @@ const App: React.FC<{}> = () => {
       });
   }, []);
 
+function App() {
+  const [dialogState, setDialogState] = useState<boolean>(false);
+  let dialog = dialogState? <Dialog/> : null;
+  function open(){
+    let value = dialogState? false : true;
+    setDialogState(value);
+  }
   return (
     <div className="App">
       <Navbar />
@@ -32,9 +40,15 @@ const App: React.FC<{}> = () => {
       <Row title="Film Popolari" movieList={data} />
       <RowPoster />
       <RowNumber />
-      {/* <Index /> */}
-      {/* <Dialog /> */}
+      <Row />
+      <Row />
       <Footer />
+      <Index /> 
+      <Dialog/>*/}
+      <button onClick={open}>Dialog</button>
+      {
+        dialog
+      }
     </div>
   );
 };
