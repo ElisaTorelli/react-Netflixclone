@@ -55,41 +55,40 @@ body {
   background-color: var(--black);
 }
 
-
 /************************************************ 
   MEDIA QUERIES (max-width 987px)
 *************************************************/
 @media all and (max-width: 987px) {
   .dropdown-icon,
   .ringbell-icon,
-  .profile-icon{
+  .profile-icon {
     display: none;
   }
 
-  .left__header__links ul li{
+  .left__header__links ul li {
     padding-left: 50px;
   }
 
-  h1{
+  h1 {
     margin-top: 80px;
     margin-bottom: -10px;
   }
 
-  .top__red__badge{
+  .top__red__badge {
     align-items: center;
     vertical-align: middle;
   }
 
-  .banner__contents{
+  .banner__contents {
     margin-top: -600px;
   }
 
   .row,
-  h3{
+  h3 {
     margin-top: 40px;
   }
 
-  h3{
+  h3 {
     font-size: 16px;
   }
 }
@@ -103,32 +102,32 @@ body {
   .banner__description,
   .left__header__links ul,
   .search-icon,
-  .dropdown-icon{
+  .dropdown-icon {
     display: none;
   }
 
-  .banner__contents{
+  .banner__contents {
     padding-top: 250px;
   }
 
-  h1{
+  h1 {
     font-size: 30px;
     display: flex;
     padding-right: 30px;
     padding-bottom: 50px;
   }
 
-  .logo{
+  .logo {
     padding-top: 15px;
   }
 
   .netflix__logo,
-  .profile__img{
+  .profile__img {
     display: block;
     z-index: 2;
   }
 
-  .right__header__links ul{
+  .right__header__links ul {
     width: 10%;
     display: flex;
     line-height: 10px;
@@ -141,7 +140,7 @@ body {
     height: 0;
   }
 
-  body{
+  body {
     max-width: 768px;
   }
 
@@ -167,12 +166,12 @@ body {
   }
 
   /* footer */
-  .footer .footer-cols{
+  .footer .footer-cols {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
   }
-  .footer ul li{
+  .footer ul li {
     list-style-type: none;
   }
 }
@@ -194,25 +193,25 @@ body {
 /************************************************ 
   MEDIA QUERIES (max-width 480px) for HOME-PAGE.HTML
 *************************************************/
-@media all and (max-width: 480px){
-  .banner__buttons{
+@media all and (max-width: 480px) {
+  .banner__buttons {
     display: none;
   }
 
   /* logo */
-  .netflix__logo{
+  .netflix__logo {
     margin-top: -20px;
     margin-left: -20px;
   }
 
   /* filmTitle */
-  h1{
+  h1 {
     font-size: 18px;
     padding-right: 30px;
     padding-top: 70px;
   }
 
-  .poster-container{
+  .poster-container {
     margin-top: 20px;
   }
 }
