@@ -1,7 +1,7 @@
+
 import Index from "./pages/Index/Index";
 import Home from "./pages/home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 
 
 const App: React.FC<{}> = () => {
@@ -14,6 +14,7 @@ const App: React.FC<{}> = () => {
         </Routes>
       </div>
     </BrowserRouter>
+
   );
 };
 
