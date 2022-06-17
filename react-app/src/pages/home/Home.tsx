@@ -8,6 +8,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import Row from '../../components/Row/Row'
 import RowNumber from '../../components/RowNumber/RowNumber'
 import RowPoster from '../../components/RowPoster/RowPoster'
+import styles from '../../components/Dialog/dialog.module.css'
 
 
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
 
     return (
     <div>
+
         <dialogContext.Provider value={{open, setOpen}}>
         <Navbar />
         <Header />
@@ -42,6 +44,7 @@ const Home = () => {
         <Footer />
         {dialog}
         </dialogContext.Provider>
+
     </div>
     )
 }

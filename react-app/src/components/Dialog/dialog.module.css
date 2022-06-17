@@ -203,3 +203,10 @@ strong{
     flex-wrap: wrap;
     font-size: 13px;
 }
+.background{
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background: red;
+}
+/*rgba(0, 0, 0, 0.5)*/
