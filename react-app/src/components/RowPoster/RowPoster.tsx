@@ -10,18 +10,32 @@ interface IRow {
 }
 
 const RowPoster: React.FC<IRow> = ({ title, movieList }) => {
+
+  const handleClickLeft = (e: any) => {
+    const parentDiv = e.target.parentNode;
+    parentDiv.scrollLeft -= 150;
+  }
+
+  const handleClickRight = (e: any) => {
+    const parentDiv = e.target.parentNode;
+    console.log(parentDiv)
+    parentDiv.scrollLeft += 150;
+  }
+
+
   return (
     // ROW POSTER
     <div className={styles["row-poster"]}>
       <h3 className={styles["poster__title"]}>{title}</h3>
       {/* CARDS */}
-      <div>
+      <div className={`${styles.cards} ${styles.invisiblescrollbar}`}>
         <button
+          onClick={handleClickRight}
           className={`${styles.freccia} ${styles.right} ${styles.poster}`}
         >
           <img src={getImg("Vector-right.png")} alt="Destra" />
         </button>
-        <button className={`${styles.freccia} ${styles.left} ${styles.poster}`}>
+        <button onClick={handleClickLeft} className={`${styles.freccia} ${styles.left} ${styles.poster}`}>
           <img src={getImg("Vector-left.png")} alt="Sinistra" />
         </button>
         <div className={styles["row-poster-container"]}>
