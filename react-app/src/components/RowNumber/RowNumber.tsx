@@ -11,16 +11,31 @@ interface IRow {
 }
 
 const RowNumber: React.FC<IRow> = ({ title, movieList }) => {
+  const handleClickLeft = (e: any) => {
+    const parentDiv = e.target.parentNode;
+    parentDiv.scrollLeft -= 150;
+  };
+
+  const handleClickRight = (e: any) => {
+    const parentDiv = e.target.parentNode;
+    console.log(parentDiv);
+    parentDiv.scrollLeft += 150;
+  };
+
   return (
     <div className={styles["row-number"]}>
       <h3 className={styles["top10"]}>{title}</h3>
-      <div>
+      <div className={`${styles.cards} ${styles.invisiblescrollbar}`}>
         <button
+          onClick={handleClickRight}
           className={`${styles.freccia} ${styles.right} ${styles.number}`}
         >
           <img src={getImg("Vector-right.png")} alt="Destra" />
         </button>
-        <button className={`${styles.freccia} ${styles.left} ${styles.number}`}>
+        <button
+          onClick={handleClickLeft}
+          className={`${styles.freccia} ${styles.left} ${styles.number}`}
+        >
           <img src={getImg("Vector-left.png")} alt="Sinistra" />
         </button>
         <div className={styles["container-row"]}>

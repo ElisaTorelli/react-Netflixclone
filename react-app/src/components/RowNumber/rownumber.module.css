@@ -1,17 +1,21 @@
 /* NUMBER IMG */
 /* rowNumber */
 .row-number {
-  margin-top: 32px;
+  margin: 32px 0;
   width: 100%;
-  overflow-x: scroll;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  padding-left: 44px;
   overflow-y: hidden;
 }
 .container-row {
-  width: 100%;
   display: flex;
-  margin-left: 44px;
 }
-.row-number::-webkit-scrollbar {
+.invisiblescrollbar::-webkit-scrollbar {
   display: none;
 }
 
@@ -26,11 +30,6 @@
   border: none;
 }
 
-.freccia:hover {
-  background: rgba(20, 20, 20, 0.5);
-  transition: 250ms all;
-}
-
 .freccia.left {
   position: absolute;
   left: 0;
@@ -43,5 +42,8 @@
 .freccia.number {
   padding: 80px 20px;
   height: 220px;
-  background-color: transparent;
+}
+.freccia.number:hover {
+  background: rgba(20, 20, 20, 0.5);
+  transition: 250ms all;
 }

@@ -1,17 +1,21 @@
 .row-poster {
-  margin-top: 32px;
+  margin: 32px 0;
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  height: 400px;
 }
 
+.cards {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  padding-left: 44px;
+  overflow-y: hidden;
+}
 .row-poster-container {
   display: flex;
-  height: 400px;
-  margin-left: 44px;
 }
 
-.row-poster::-webkit-scrollbar {
+.invisiblescrollbar::-webkit-scrollbar {
   display: none;
 }
 
