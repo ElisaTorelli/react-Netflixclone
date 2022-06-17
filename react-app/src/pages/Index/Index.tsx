@@ -19,7 +19,7 @@ const Index = () => {
             <Link to="/home" title="redirect" className={styles["p2"]}><button className={styles["btn"]}><span>Anco Marzio</span></button></Link>
             <Link to="/home" title="redirect" className={styles["p3"]}><button className={styles["btn"]}><span>Servio Tullio</span></button></Link>
             <Link to="/home" title="redirect" className={styles["p4"]}><button className={styles["btn"]}><span>Tullio Ostilio</span></button></Link>
-            <Link to="/home" title="redirect" className={styles["p5"]}><button  className={`${styles.btn} ${styles.newProfile}`}><span>Nuovo Profilo</span></button></Link>
+            <a title="redirect" className={styles["p5"]}><button  className={`${styles.btn} ${styles.newProfile}`}><span>Nuovo Profilo</span></button></a>
           </div>
           {/* <!-- MANAGE PROFILE --> */}
           <button className={styles["manageProfile" ]} id={styles["addIcon"]}>Gestisci Profili</button>
