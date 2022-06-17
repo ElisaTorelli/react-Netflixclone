@@ -20,7 +20,7 @@ const Card: React.FC<ICard> = ({ movie: { backdrop_path, title } }) => {
   }
 
   return (
-    <div className={styles["general-container"]} onClick={setDialog}>
+    <div className={styles["general-container"]}  >
       <div className={styles["card"]}>
         <div className={styles["card__info"]}>
           <div className={styles["container-button"]}>
@@ -41,8 +41,8 @@ const Card: React.FC<ICard> = ({ movie: { backdrop_path, title } }) => {
               </span>
               </div>
             </div>
-            <div className={styles["box-button-circle"]}>
-            <span className="material-symbols-outlined">
+            <div className={styles["box-button-circle"]} >
+            <span className="material-symbols-outlined" onClick={setDialog}>
             expand_circle_down
             </span>
               <div className={styles["alert"]}>Episodi e info</div>
