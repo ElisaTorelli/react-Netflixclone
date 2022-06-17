@@ -1,17 +1,11 @@
-.poster-img{
-    height: 400px;
-    width: 205px;
-    border-radius: 4px;
+.poster-img {
+  height: 400px;
+  width: 205px;
+  border-radius: 4px;
+  margin-right: 8px;
 }
 
 .card-container {
-    width: 215px;
-    border-radius: 3px;
-}
-
-/* POSTER IMG */
-.poster-img{
-    height: 400px;
-    width: 205px;
-    border-radius: 4px;
+  width: 215px;
+  border-radius: 3px;
 }

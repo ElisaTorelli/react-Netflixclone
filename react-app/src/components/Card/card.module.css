@@ -56,7 +56,9 @@
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
+  cursor: pointer;
 }
+
 .circle-down {
   display: flex;
   flex-direction: row-reverse;
@@ -78,7 +80,7 @@
   border-radius: 2px;
   background: var(--white);
 }
-/* fine  */
+
 
 .box-button .material-symbols-outlined {
   font-size: 20px;
@@ -107,6 +109,10 @@
   color: green;
 }
 
+.seasons{
+  margin-left: 5px;
+}
+
 .show-description {
   width: 100%;
   font-size: 12px;
@@ -119,4 +125,8 @@
 
 .show-description ul li {
   list-style-type: none;
+}
+
+.text{
+  color: green;
 }

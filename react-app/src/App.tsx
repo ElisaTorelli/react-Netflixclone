@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import RowPoster from "./components/RowPoster/RowPoster";
@@ -8,28 +9,17 @@ import { IMovie } from "./commons/IResult";
 import Footer from "./components/Footer/Footer";
 import Index from "./components/Index/Index";
 import Dialog from "./components/Dialog/Dialog";
+=======
+import Index from "./pages/Index/Index";
+import Home from "./pages/home/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+
+>>>>>>> 6fee4f985366ed0de860e8bb4bd67f592722db77
 
 const App: React.FC<{}> = () => {
-  const [data, setData] = useState<Array<IMovie> | []>([]);
-
-  useEffect(() => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=3bb82372ef97dc8c0c45d353261e2f31&quot"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setData([...data.results]);
-      });
-  }, []);
-
-function App() {
-  const [dialogState, setDialogState] = useState<boolean>(false);
-  let dialog = dialogState? <Dialog/> : null;
-  function open(){
-    let value = dialogState? false : true;
-    setDialogState(value);
-  }
   return (
+<<<<<<< HEAD
     <div className="App">
       <Navbar />
       <Header />
@@ -48,6 +38,16 @@ function App() {
         dialog
       }
     </div>
+=======
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<Index />}/>
+          <Route path='home' element={<Home />}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
+>>>>>>> 6fee4f985366ed0de860e8bb4bd67f592722db77
   );
 };
 

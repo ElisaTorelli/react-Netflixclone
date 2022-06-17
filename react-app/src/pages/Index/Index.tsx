@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import { getImg } from '../../commons/API';
-
+import { Routes } from 'react-router-dom';
 
 const Index = () => {
   return (
