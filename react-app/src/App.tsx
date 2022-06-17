@@ -6,10 +6,8 @@ import RowNumber from "./components/RowNumber/RowNumber";
 import Header from "./components/Header/Header";
 import { IMovie } from "./commons/IResult";
 import Footer from "./components/Footer/Footer";
-
 import Index from "./components/Index/Index";
 import Dialog from "./components/Dialog/Dialog";
-import { useState } from "react";
 
 const App: React.FC<{}> = () => {
   const [data, setData] = useState<Array<IMovie> | []>([]);
@@ -40,11 +38,11 @@ function App() {
       <Row title="Film Popolari" movieList={data} />
       <RowPoster />
       <RowNumber />
-      <Row />
-      <Row />
+      <Row title="Film Popolari" movieList={data} />
+      <Row title="Film Popolari" movieList={data} />
       <Footer />
       <Index /> 
-      <Dialog/>*/}
+      <Dialog/>
       <button onClick={open}>Dialog</button>
       {
         dialog
