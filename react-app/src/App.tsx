@@ -6,13 +6,18 @@ import RowNumber from "./components/RowNumber/RowNumber";
 import Header from "./components/Header/Header";
 import { IMovie } from "./commons/IResult";
 import Footer from "./components/Footer/Footer";
-
-import Index from "./components/Index/Index";
 import Dialog from "./components/Dialog/Dialog";
-import { useState } from "react";
+import { dialogContext } from "./commons/context";
+
+
 
 const App: React.FC<{}> = () => {
+
   const [data, setData] = useState<Array<IMovie> | []>([]);
+
+  const [open, setOpen] = useState<boolean>(false);
+  let dialog = open? <Dialog/> : null;
+
 
   useEffect(() => {
     fetch(
@@ -24,28 +29,23 @@ const App: React.FC<{}> = () => {
       });
   }, []);
 
-function App() {
-  const [dialogState, setDialogState] = useState<boolean>(false);
-  let dialog = dialogState? <Dialog/> : null;
-  function open(){
-    let value = dialogState? false : true;
-    setDialogState(value);
-  }
   return (
-    <div className="App">
+    <dialogContext.Provider value={{open, setOpen}}>
+      <div className="App">
       <Navbar />
       <Header />
       <Row title="Film Popolari" movieList={data} />
-      <Row title="Film Popolari" movieList={data} />
-      <Row title="Film Popolari" movieList={data} />
+      <Row title="Campari, continua a guardare..." movieList={data} />
+      <Row title="Popolari in Italia" movieList={data} />
       <RowPoster title="Originali Netflix" movieList={data} />
       <RowNumber title="Top 10 in Italia" movieList={data} />
-      <Row title="Film Popolari" movieList={data} />
-      <Row title="Film Popolari" movieList={data} />
+      {/* <Index /> */}
+      <Row title="Ultime uscite" movieList={data} />
+      <Row title="Popolari Netflix" movieList={data} />
       <Footer />
-      <Index /> 
-      <Dialog/>
+      {dialog}
     </div>
+    </dialogContext.Provider>
   );
 };
 
