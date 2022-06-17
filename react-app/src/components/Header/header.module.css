@@ -84,7 +84,7 @@ h1{
   
   /* WhiteButton */
   #white-btn {
-    color: var(--black);
+    color: black;
     background-color: var(--white);
   }
   
