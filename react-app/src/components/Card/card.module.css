@@ -80,7 +80,7 @@
   border-radius: 2px;
   background: var(--white);
 }
-/* fine  */
+
 
 .box-button .material-symbols-outlined {
   font-size: 20px;
@@ -107,6 +107,10 @@
 
 .info p {
   color: green;
+}
+
+.seasons{
+  margin-left: 5px;
 }
 
 .show-description {
