@@ -56,7 +56,7 @@ const Card: React.FC<ICard> = ({ movie: { backdrop_path, title } }) => {
             </div>
             <div className={styles["info"]}>
               <span className={styles["vm14"]}>VM14</span>
-              <span>6 stagioni</span>
+              <span className={styles["seasons"]}>6 stagioni</span>
               <span className={styles["material-symbols-outlined"]}> hd </span>
             </div>
           </div>
