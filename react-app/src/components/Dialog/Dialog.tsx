@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { dialogContext } from '../../commons/context';
 import styles from './dialog.module.css'
 
 let arMovie = [{titolo:"Questione di chimica",duration:"58",synopsis:"Dopo la diagnosi di cancro terminale ai polmoni, un insegnante di chimica del liceo si dà alla produzione di metanfetamine per garantire la sopravvivenza della  famiglia."},
@@ -14,7 +15,15 @@ let arSelection = [{value:"stagione1",option:"Stagione 1"},
 {value:"stagione3",option:"Stagione 3"},
 {value:"stagione4",option:"Stagione 4"},]
 
+
 const Dialog = () => {
+
+  const {open, setOpen} = useContext(dialogContext);
+  function closeDialog(){
+    let value = open? false : true;
+    setOpen(value);
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.imageb}>
@@ -37,7 +46,7 @@ const Dialog = () => {
             </button>
             <button className={styles.close} title="btn">
                 <div>
-                    <img src={require('../../assets/images/close.png')} alt="" id="close-icon"/>
+                    <img src={require('../../assets/images/close.png')} alt="" id="close-icon" onClick={closeDialog}/>
                 </div>
             </button>
         </div>
