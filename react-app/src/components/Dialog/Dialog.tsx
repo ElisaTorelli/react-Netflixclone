@@ -25,83 +25,85 @@ const Dialog = () => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.imageb}>
-          <img src={require('../../assets/images/breaking-bad.jpeg')} alt="breaking-bad" className={styles.imgb}></img>
-          <button className={styles.dialog__banner__button} title="btn" id="white-button">
-                <div>
-                    <img src={require('../../assets/images/Play.png')} alt=""/>
-                    <span>Riproduci</span>
-                </div>
-            </button>
-            <button className={styles.check} title="btn">
-                <div>
-                    <img src={require('../../assets/images/check_circle.png')} alt=""/>
-                </div>
-            </button>
-            <button className={styles.recommend} title="btn">
-                <div>
-                    <img src={require('../../assets/images/recommend.png')} alt=""/>
-                </div>
-            </button>
-            <button className={styles.close} title="btn">
-                <div>
-                    <img src={require('../../assets/images/close.png')} alt="" id="close-icon" onClick={closeDialog}/>
-                </div>
-            </button>
-        </div>
-        <div className={styles.rowinfo}>
-            <p className={styles.pinfo}>99% compatibile</p>
-            <p className={styles.pinfo2}>2013</p>
-            <p className={styles.pinfo3}>VM14</p>
-            <p className={styles.pinfo2}>5 stagioni</p>
-            <p className={styles.pinfo4}>HD</p>
-            <div className={styles.cast}>
-                <div className={styles.scast}>
-                    <strong>Cast:</strong><span>Bryan Cranston,Aaron Paul, Anna Gunn, altro</span> <br/>
-                </div>
-                <div className={styles.scast}>
-                    <strong>Generi:</strong><span>Serie TV crime, Thriller TV, Drammi TV</span><br/>
-                </div>
-                <div className={styles.scast}>
-                    <strong>Caratteristiche:</strong><span>Violento,Crudo,Cupo</span><br/>
-                </div>
-            </div>
-        </div>
-        <div className={styles.space}>
-            <div className={styles.top}>
-                <h3>Episodi</h3>
-                <div className={styles.shows}>
-                    <select name='show' id='show' title='dialog' className={styles.show}>
-                      {
-                        arSelection.map((item,index) =>{
-                          return(
-                            <option key={`${item.option + index}`} value={item.value}>{item.option}</option>
-                          )
-                        })
-                      }
-                    </select>
-                </div> 
-            </div>
-            <div className={styles.mid} id='mid'>
-              {
-                arMovie.map((item,index) =>{
-                  return(
-                    <div key={'movie'+index} className={styles.episode}>
-                    <h3>{index+1}</h3>
-                    <img src={require('../../assets/images/breaking-bad.jpeg')} alt='CardImage'/>
-                    <div className={styles.description}>
-                        <h4>{item.titolo}</h4>
-                        <p>{item.duration}min</p>
-                        <p>{item.synopsis}
-                        </p>
-                    </div>
-                </div>
-                  )
-                })
-              }
-            </div>
-        </div>
+    <div>
+      <div className={styles.container}>
+        <div className={styles.imageb}>
+            <img src={require('../../assets/images/breaking-bad.jpeg')} alt="breaking-bad" className={styles.imgb}></img>
+            <button className={styles.dialog__banner__button} title="btn" id="white-button">
+                  <div>
+                      <img src={require('../../assets/images/Play.png')} alt=""/>
+                      <span>Riproduci</span>
+                  </div>
+              </button>
+              <button className={styles.check} title="btn">
+                  <div>
+                      <img src={require('../../assets/images/check_circle.png')} alt=""/>
+                  </div>
+              </button>
+              <button className={styles.recommend} title="btn">
+                  <div>
+                      <img src={require('../../assets/images/recommend.png')} alt=""/>
+                  </div>
+              </button>
+              <button className={styles.close} title="btn">
+                  <div>
+                      <img src={require('../../assets/images/close.png')} alt="" id="close-icon" onClick={closeDialog}/>
+                  </div>
+              </button>
+          </div>
+          <div className={styles.rowinfo}>
+              <p className={styles.pinfo}>99% compatibile</p>
+              <p className={styles.pinfo2}>2013</p>
+              <p className={styles.pinfo3}>VM14</p>
+              <p className={styles.pinfo2}>5 stagioni</p>
+              <p className={styles.pinfo4}>HD</p>
+              <div className={styles.cast}>
+                  <div className={styles.scast}>
+                      <strong>Cast:</strong><span>Bryan Cranston,Aaron Paul, Anna Gunn, altro</span> <br/>
+                  </div>
+                  <div className={styles.scast}>
+                      <strong>Generi:</strong><span>Serie TV crime, Thriller TV, Drammi TV</span><br/>
+                  </div>
+                  <div className={styles.scast}>
+                      <strong>Caratteristiche:</strong><span>Violento,Crudo,Cupo</span><br/>
+                  </div>
+              </div>
+          </div>
+          <div className={styles.space}>
+              <div className={styles.top}>
+                  <h3>Episodi</h3>
+                  <div className={styles.shows}>
+                      <select name='show' id='show' title='dialog' className={styles.show}>
+                        {
+                          arSelection.map((item,index) =>{
+                            return(
+                              <option key={`${item.option + index}`} value={item.value}>{item.option}</option>
+                            )
+                          })
+                        }
+                      </select>
+                  </div> 
+              </div>
+              <div className={styles.mid} id='mid'>
+                {
+                  arMovie.map((item,index) =>{
+                    return(
+                      <div key={'movie'+index} className={styles.episode}>
+                      <h3>{index+1}</h3>
+                      <img src={require('../../assets/images/breaking-bad.jpeg')} alt='CardImage'/>
+                      <div className={styles.description}>
+                          <h4>{item.titolo}</h4>
+                          <p>{item.duration}min</p>
+                          <p>{item.synopsis}
+                          </p>
+                      </div>
+                  </div>
+                    )
+                  })
+                }
+              </div>
+          </div>
+      </div>
     </div>
   )
 }
