@@ -56,7 +56,9 @@
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
+  cursor: pointer;
 }
+
 .circle-down {
   display: flex;
   flex-direction: row-reverse;
@@ -119,4 +121,8 @@
 
 .show-description ul li {
   list-style-type: none;
+}
+
+.text{
+  color: green;
 }

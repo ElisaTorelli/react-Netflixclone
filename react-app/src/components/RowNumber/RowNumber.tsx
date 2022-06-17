@@ -1,12 +1,19 @@
 import React from "react";
-import { getImg } from "../../commons/API";
 import CardNumber from "../CardNumber/CardNumber";
 import styles from "./rownumber.module.css";
+import { useState, useEffect } from "react";
+import { getImg } from "../../commons/API";
+import { IMovie } from "../../commons/IResult";
 
-const RowNumber = () => {
+interface IRow {
+  title: string;
+  movieList: Array<IMovie> | [];
+}
+
+const RowNumber: React.FC<IRow> = ({ title, movieList }) => {
   return (
     <div className={styles["row-number"]}>
-      <h3 className={styles["top10"]}>La top 10 di oggi in Italia</h3>
+      <h3 className={styles["top10"]}>{title}</h3>
       <div>
         <button
           className={`${styles.freccia} ${styles.right} ${styles.number}`}
@@ -17,7 +24,17 @@ const RowNumber = () => {
           <img src={getImg("Vector-left.png")} alt="Sinistra" />
         </button>
         <div className={styles["container-row"]}>
-          <CardNumber />
+          {movieList
+            .filter((movie, index) => {
+              return index < 10;
+            })
+            .map((movie, index) => {
+              return (
+                <React.Fragment key={`movie${index}`}>
+                  <CardNumber movie={movie} numberFilm={index} />
+                </React.Fragment>
+              );
+            })}
         </div>
       </div>
     </div>
